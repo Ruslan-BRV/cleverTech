@@ -1,0 +1,15 @@
+ {% extends "base.html" %}
+
+ {% block title %}Главная{% endblock title %}
+
+ {% block content %}
+    {% for product in listProducts %}
+        <div class="product">
+            <h2>{{ product.title }}</h2>
+
+            <h4>{{ product.price }}</h4>
+
+            <p>{{ product.desc }}</p>
+        </div>
+    {% endfor %}   
+ {% endblock content %}
